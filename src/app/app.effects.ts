@@ -18,5 +18,5 @@ export class AppEffects {
   @Effect()
   GetTodos$: Observable<Action> = this.actions$.
     ofType<AppActions.GetMessage>(AppActions.GET_MESSAGE)
-    .map(action => new AppActions.GetMessageSuccess("TEST"))
+    .map(action => new AppActions.GetMessageSuccess(`TEST ${new Date().getTime()} `));
 }
